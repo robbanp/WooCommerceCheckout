@@ -1,11 +1,11 @@
 <?php
 /*
- * Plugin Name: WooCommerce Mondido Checkout Gateway
- * Plugin URI: https://www.mondido.com/
+ * Plugin Name: WooCommerce Volvo Checkout Gateway
+ * Plugin URI: https://www.volvopayments.com/
  * Description: Provides a Payment Gateway through Mondido for WooCommerce.
  * Author: Mondido
- * Author URI: https://www.mondido.com/
- * Version: 1.2.0
+ * Author URI: https://www.volvopayments.com/
+ * Version: 1.3.0
  * Text Domain: woocommerce-gateway-mondido-checkout
  * Domain Path: /languages
  * WC requires at least: 3.0.0

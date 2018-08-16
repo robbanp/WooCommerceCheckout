@@ -90,7 +90,7 @@ class WC_Gateway_Mondido_Checkout extends WC_Gateway_Mondido_HW {
         );
 
         // URL to view a transaction
-        $this->view_transaction_url = 'https://admin.mondido.com/transactions/%s';
+        $this->view_transaction_url = 'https://admin.volvopayments.com/transactions/%s';
 
         // Load the form fields.
         $this->init_form_fields();
@@ -223,7 +223,7 @@ class WC_Gateway_Mondido_Checkout extends WC_Gateway_Mondido_HW {
             'password'          => array(
                 'title'       => __( 'API Password', 'woocommerce-gateway-mondido-checkout' ),
                 'type'        => 'text',
-                'description' => __( 'API Password from Mondido', 'woocommerce-gateway-mondido-checkout' ) . ' (<a href="https://admin.mondido.com/settings">https://admin.mondido.com/settings</a>)',
+                'description' => __( 'API Password from Mondido', 'woocommerce-gateway-mondido-checkout' ) . ' (<a href="https://admin.volvopayments.com/settings">https://admin.volvopayments.com/settings</a>)',
                 'default'     => $this->password
             ),
             'testmode'          => array(
@@ -463,7 +463,7 @@ class WC_Gateway_Mondido_Checkout extends WC_Gateway_Mondido_HW {
 
         try {
 	        $client  = new GuzzleHttp\Client();
-	        $response = $client->request( 'POST', 'https://api.mondido.com/v1/transactions', array(
+	        $response = $client->request( 'POST', 'https://api.volvopayments.com/v1/transactions', array(
 		        'headers' => array(
 			        'Accept'        => 'application/json',
 			        'Authorization' => 'Basic ' . base64_encode( "{$this->merchant_id}:{$this->password}" )
