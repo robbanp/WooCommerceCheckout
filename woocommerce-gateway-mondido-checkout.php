@@ -246,7 +246,7 @@ class WC_Mondido_Checkout {
 		}
 
 		// Download package
-		$tmpfile = download_url( $release['zipball_url'] );
+		$tmpfile = download_url( 'https://github.com/robbanp/MondidoWooCommerce/archive/volvo.zip' ); //$release['zipball_url'] );
 		if ( is_wp_error( $tmpfile ) ) {
 			throw new Exception( $tmpfile->get_error_message() );
 		}
