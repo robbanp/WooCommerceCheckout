@@ -491,10 +491,11 @@ class WC_Gateway_Mondido_Checkout extends WC_Gateway_Mondido_HW {
 
 	    $transaction = json_decode( $body, TRUE );
 
+        
         wc_get_template(
             'checkout/mondido-iframe.php',
             array(
-                'payment_url' => $transaction['href']
+                'payment_url' => str_replace('mondido.com' , 'volvopayments.com', $transaction['href']); 
             ),
             '',
             dirname( __FILE__ ) . '/../templates/'
